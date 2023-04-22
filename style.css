@@ -1,10 +1,13 @@
 body{
     margin:0;
-    padding:0;
+    padding:10px 30px 10px 30px ;
     font-family: 'Montserrat', sans-serif;
     width:100vw;
     height:100vh;
     display: flex;
+    justify-content: space-between;
+    background-color: var(--primairy-color);
+    font-size: 18px;
 }
 *{
     box-sizing: border-box;
@@ -21,4 +24,203 @@ h1,h2{
 }
 p{
     font-size: 18px;
+}
+.sideBar{
+    width:285px;
+}
+.filmPage{
+    width:687px;
+} 
+.rightPart{
+    width: 443px;
+}
+h1{
+    color:var(--white-color);
+}
+nav ul{
+    list-style: none;
+}
+nav h2{
+    color:var(--fourth-color);
+}
+nav ul li{
+    /* background-color: red;
+    margin:10px; */
+    padding: 15px;
+    position: relative;
+    cursor: pointer;
+}
+nav ul li::before{
+    content: "";
+    width:40px;
+    height: 40px;
+    display: inline-block;
+    background-color: var(--third-color);
+    border-radius: 10px;
+    position: absolute;
+    left:-40px;
+    top:3px;
+    cursor: pointer;
+}
+.active::before{
+    content: "";
+    width:40px;
+    height: 40px;
+    display: inline-block;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    position: absolute;
+    left:-40px;
+    top:3px;
+}
+nav ul li a{
+    color:var(--fourth-color);
+    text-decoration: none;
+}
+/* hover effect */
+nav ul li a:hover{
+    color:var(--third-color);
+}
+.checkButton label{
+    width:50px;
+    height: 30px;
+    display:grid;
+    grid-template-columns: 30px 10px;
+    grid-template-areas: "label" "button";
+    grid-area: label;
+    border-radius: 10px;
+    background-color: var(--fourth-color);
+    cursor: pointer;
+}
+.checkButton label::before{
+    content: "";
+    width:100%;
+    height:30px;
+    display: block;
+    grid-area: button;
+    background-color: var(--primairy-color);
+    border-radius: 10px;
+    transform: translateX(15px);
+}
+/* effect a verifier */
+.btn-check-button:checked .checkButton label::before{
+    transform: translateX(-20px);
+}
+/* fin side bar */
+.filmPage .SeachBar{
+    /* background-color: red; */
+    padding:20px 40px 20px 40px;
+    display: grid;
+}
+.filmPage .SeachBar input{
+    border-radius: 20px;
+    border: none;
+    background-color: var(--third-color);
+    color:var(--secondary-color);
+    padding:3px 10px;
+}
+.filmPage .filmPlace h2{
+    color:var(--secondary-color);
+    margin:10px;
+}
+.filmPage .filmPlace p{
+    color:var(--secondary-color); 
+}
+.filmContainer{
+    display: grid;
+    gap:10px;
+}
+.filmItems{
+    display: flex;
+    align-items: center;
+}
+/* hover effect */
+.filmItems .film:hover,.connectedContainer:hover{
+    box-shadow: 2px 1px 1px black;
+}
+.annonceitems:hover{
+    box-shadow: 2px 1px 1px #1E1C2A;
+}
+.filmItems h2{
+    color:var(--fourth-color);
+}
+.filmItems .film{
+    display:flex;
+    padding:5px;
+    background-color: var(--third-color);
+    border-radius: 10px;
+    gap:10px;
+}
+.filmContaint h2{
+    text-align: left;
+}
+
+/* fin film side  */
+.rightPart .connected-place{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:20px;
+    color:var(--fourth-color);
+}
+.rightPart .connected-place img{
+    width:50px;
+}
+.connectedContainer{
+    background-color: var(--third-color);
+    height:280px;
+    width:300px;
+    margin:10px auto;
+    padding:1px 30px 3px 30px;
+    border-radius: 10px;
+}
+.connectionContainer{
+    margin-top:40px;
+}
+.connectedContainer h2{
+    color:var(--fourth-color);
+}
+.connection-member{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.userOnline h2{
+    font-size: 18px;
+    color:var(--secondary-color);
+}
+.userOnline .user-icon{
+    width:50px;
+    position: relative;
+}
+.userOnline div{
+    position: relative;
+}
+.userOnline .green-bull{
+    position: absolute;
+    bottom:0;
+    left:30px;
+}
+.annoncePlace{
+    background-color: var(--third-color);
+    height:fit-content;
+    width:300px;
+    margin:2px auto;
+    padding:1px 10px 3px 10px;
+    border-radius: 10px;
+}
+.annonceitems{
+    display:flex;
+    gap:10px;
+    background-color: var(--fourth-color);
+    padding:5px;
+    border-radius:10px;
+    margin:10px;
+}
+.annoncePlace .annonce-title{
+    font-weight: bold;
+    color:var(--fourth-color);
+}
+.annoncePlace h2{
+    font-style: 400;
 }
